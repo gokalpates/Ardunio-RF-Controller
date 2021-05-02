@@ -1,4 +1,3 @@
-//RECEIVER
 #include <SPI.h>
 #include "nRF24L01.h"
 #include "RF24.h"
@@ -14,28 +13,6 @@ struct packet
 };
 
 packet packetInstance;
-
-void debug()
-{
-   Serial.print(packetInstance.rAnalogValue);
-   Serial.print(", ");
-   Serial.print(packetInstance.gAnalogValue);
-   Serial.print(", ");
-   Serial.print(packetInstance.bAnalogValue);
-   Serial.print(", ");
-   Serial.print(packetInstance.tAnalogValue);
-   Serial.print(", ");
-   Serial.print(packetInstance.xAnalogValue);
-   Serial.print(", ");
-   Serial.print(packetInstance.yAnalogValue);
-   Serial.print(", ");
-   for(int i = 0; i<5; i++)
-   {
-      Serial.print(packetInstance.buttonValue[i]);
-      Serial.print(", ");
-   }
-   Serial.println();
-}
 
 String convertToString()
 {
@@ -71,12 +48,8 @@ void setup(void)
 void loop(void){
   if (radio.available())
   {
-    //Read data from transmitter(Controller).
     radio.read(&packetInstance, sizeof(packet));      
-    //Convert struct to string for sending.
     String convertedString = convertToString();
-    //Debug string.
     Serial.println(convertedString);
-    //Send data to processing application.
   }
 }

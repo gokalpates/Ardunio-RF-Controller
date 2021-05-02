@@ -1,4 +1,3 @@
-//TRANSMITTER
 #include  <SPI.h>
 #include "nRF24L01.h"
 #include "RF24.h"
@@ -22,22 +21,6 @@ struct packet
 };
 
 packet packetInstance;
-
-void debug()
-{
-   Serial.print("RGB: ");
-   Serial.print(packetInstance.rAnalogValue);
-   Serial.print(", ");
-   Serial.print(packetInstance.gAnalogValue);
-   Serial.print(", ");
-   Serial.println(packetInstance.bAnalogValue);
-   Serial.print("Thickness: ");
-   Serial.print(packetInstance.tAnalogValue);
-   Serial.println("");
-   Serial.print(packetInstance.xAnalogValue);
-   Serial.print(" , ");
-   Serial.println(packetInstance.yAnalogValue);
-}
 
 void setup(void)
 {
