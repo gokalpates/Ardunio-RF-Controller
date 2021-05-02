@@ -7,10 +7,6 @@ Serial myPort;
 String received;
 
 int[] xyCor = {0,0};
-int[] change_in_coordinates = {0,0};
-int[][] rectCor = {{0,0} , {0,0}};
-//                 x1,y1    x2,y2
-int rectCtr = 0;
 
 int[] lineCor={0,0,0,0};
 int lineCtr = 0;
@@ -169,6 +165,14 @@ void UI()
   textAlign(LEFT);
   fill(0);
   text("Red: " + (int)red + "\nGreen: " + (int)green+ "\nBlue: " + (int)blue  + "\nThickness: " + (int)thickness ,175,35);
+  
+  text("INSTRUCTIONS",850,35);
+  
+  textSize(16);
+  textAlign(LEFT);
+  fill(0);
+  text("\nBUTTON 1 HOLD: You draw with your ellipse type brush\nBUTTON 3 HOLD: You draw with your eraser type brush\nBUTTON 5 PRESS: You draw a straight line between the two positions you pressed",375,55);
+  text("\nBUTTON 2 PRESS: You can erase all drawings\nBUTTON 4 HOLD: You draw with your square type brush\nBUTTON 1 HOLD + BUTTON 2 PRESS: You save the drawing to the processing file (File name: resim.png)",1025,55);
   
   strokeWeight(10);
   stroke(0);
