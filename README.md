@@ -7,7 +7,7 @@ This project was made for 2nd year Intro to Electronics class (BIL210).
 
 # Contributors
 
-Mehmet Umut İNCEER
-Umut ÇİLOĞLU
-Gökalp ATEŞ
-Doğa Sarp SEZER
+Mehmet Umut İNCEER <br>
+Umut ÇİLOĞLU <br>
+Gökalp ATEŞ <br>
+Doğa Sarp SEZER <br>
